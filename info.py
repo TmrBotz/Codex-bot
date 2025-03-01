@@ -28,10 +28,10 @@ BOT_TOKEN = environ.get('BOT_TOKEN', "6468740696:AAERlGTcr6PkLXCx9VsThAyO7Y_nrbu
 CACHE_TIME = int(environ.get('CACHE_TIME', 300))
 USE_CAPTION_FILTER = bool(environ.get('USE_CAPTION_FILTER', True))
 
-PICS = (environ.get('PICS', 'https://envs.sh/WdA.jpg https://envs.sh/Wdj.jpg')).split()  # Sample pic
+PICS = (environ.get('PICS', 'https://envs.sh/i4N.jpg https://envs.sh/i4g.jpg https://envs.sh/i4H.jpg')).split()  # Sample pic
 NOR_IMG = environ.get("NOR_IMG", "https://envs.sh/Wdj.jpg")
-MELCOW_VID = environ.get("MELCOW_VID", "https://envs.sh/Wdj.jpg")
-SPELL_IMG = environ.get("SPELL_IMG", "https://envs.sh/Wdj.jpg")
+MELCOW_VID = environ.get("MELCOW_VID", "https://envs.sh/i4H.jpg")
+SPELL_IMG = environ.get("SPELL_IMG", "https://envs.sh/i4N.jpg")
 SUBSCRIPTION = (environ.get('SUBSCRIPTION', 'https://envs.sh/Wdj.jpg'))
 FSUB_PICS = (environ.get('FSUB_PICS', 'https://envs.sh/Wdj.jpg')).split()  # Fsub pic
 
@@ -44,12 +44,12 @@ LOG_CHANNEL = int(environ.get('LOG_CHANNEL', '-1002178270630'))  # Log channel i
 BIN_CHANNEL = int(environ.get('BIN_CHANNEL', '-1002178270630'))  # Bin channel id (make sure bot is admin)
 MOVIE_UPDATE_CHANNEL = int(environ.get('MOVIE_UPDATE_CHANNEL', '-1002178270630'))  # Notification of those who verify will be sent to your channel
 PREMIUM_LOGS = int(environ.get('PREMIUM_LOGS', '-1002178270630'))  # Premium logs channel id
-auth_channel = environ.get('AUTH_CHANNEL', '-1002178270630')  # Channel/Group ID for force sub (make sure bot is admin)
-DELETE_CHANNELS = [int(dch) if id_pattern.search(dch) else dch for dch in environ.get('DELETE_CHANNELS', '').split()]
+auth_channel = environ.get('AUTH_CHANNEL', '-1002001105061')  # Channel/Group ID for force sub (make sure bot is admin)
+DELETE_CHANNELS = [int(dch) if id_pattern.search(dch) else dch for dch in environ.get('DELETE_CHANNELS', '-1002150048594').split()]
 support_chat_id = environ.get('SUPPORT_CHAT_ID', '')  # Support group id (make sure bot is admin)
 reqst_channel = environ.get('REQST_CHANNEL_ID', '')  # Request channel id (make sure bot is admin)
-AUTH_CHANNEL = [int(fch) if id_pattern.search(fch) else fch for fch in environ.get('AUTH_CHANNEL', '-1002178270630').split()]
-MULTI_FSUB = [int(channel_id) for channel_id in environ.get('MULTI_FSUB', '-1002178270630').split() if re.match(r'^-?\d+$', channel_id)]  # Channel for force sub (make sure bot is admin)
+AUTH_CHANNEL = [int(fch) if id_pattern.search(fch) else fch for fch in environ.get('AUTH_CHANNEL', '-1002001105061').split()]
+MULTI_FSUB = [int(channel_id) for channel_id in environ.get('MULTI_FSUB', '-1002165170455').split() if re.match(r'^-?\d+$', channel_id)]  # Channel for force sub (make sure bot is admin)
 
 
 # ============================
@@ -99,7 +99,7 @@ IS_TUTORIAL = bool(environ.get('IS_TUTORIAL', False))
 # ============================
 # Channel & Group Links Configuration
 # ============================
-GRP_LNK = environ.get('GRP_LNK', 'Sky_Movie_req4u')
+GRP_LNK = environ.get('GRP_LNK', 'https://t.me/Sky_Movie_req4u')
 CHNL_LNK = environ.get('CHNL_LNK', 'https://t.me/Sky_Movie4u')
 OWNER_LNK = environ.get('OWNER_LNK', 'https://t.me/Tmr_Developer')
 MOVIE_UPDATE_CHANNEL_LNK = environ.get('MOVIE_UPDATE_CHANNEL_LNK', 'https://t.me/Sky_Movie4u')
@@ -137,9 +137,9 @@ INDEX_REQ_CHANNEL = int(environ.get('INDEX_REQ_CHANNEL', LOG_CHANNEL))
 FILE_STORE_CHANNEL = [int(ch) for ch in (environ.get('FILE_STORE_CHANNEL', '')).split()]
 MELCOW_NEW_USERS = is_enabled((environ.get('MELCOW_NEW_USERS', "False")), False)
 PROTECT_CONTENT = is_enabled((environ.get('PROTECT_CONTENT', "False")), True)
-PUBLIC_FILE_STORE = is_enabled((environ.get('PUBLIC_FILE_STORE', "True")), True)
+PUBLIC_FILE_STORE = is_enabled((environ.get('PUBLIC_FILE_STORE', "False")), True)
 PM_SEARCH = bool(environ.get('PM_SEARCH', True))  # PM Search On (True) / Off (False)
-EMOJI_MODE = bool(environ.get('EMOJI_MODE', True))  # Emoji status On (True) / Off (False)
+EMOJI_MODE = bool(environ.get('EMOJI_MODE', False))  # Emoji status On (True) / Off (False)
 
 # ============================
 # Bot Configuration
